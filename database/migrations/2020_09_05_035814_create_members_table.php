@@ -11,17 +11,6 @@ class CreateMembersTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('members', function (Blueprint $table) {
-            $table->increments('id');
-            $table->dateTime('created_at');
-            $table->string('name');
-            $table->integer('password');
-            $table->string('email');
-            $table->string('icon');
-        });
-    }
 
     /**
      * Reverse the migrations.
