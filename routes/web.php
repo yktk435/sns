@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/study','StudyController');
 Route::get('/','ModelClassController');
+Route::get('article','ArticleController@index');
