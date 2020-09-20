@@ -12,45 +12,125 @@
     <script type="text/javascript" src="js/index.js"></script>
     <div class="parent">
         <!-- アイコン -->
-        <div class="main left border">
-            <div>
-                <div class="div-outside-image">
-                    <a class="icon-link" href="" aria-label="ホーム">
-                        <img class="image-icon" src="image/home.png" alt="ホームアイコン">
+        <header>
+            <div class="main left border">
+                <div class="div-outside-image site-image">
+                    <a class="icon-link" href="" aria-label="サイトアイコン">
+                        <img class="image-icon site-image-icon" src="image/cat.png" alt="サイトアイコン">
                     </a>
                 </div>
-                <div class="div-outside-image">
-                    <a class="icon-link" href="" aria-label="検索">
-                        <img class="image-icon" src="image/serch.png" alt="検索アイコン">
-                    </a>
-                </div>
-                <div class="div-outside-image">
-                    <a class="icon-link" href="" aria-label="通知">
-                        <img class="image-icon" src="image/bell.png" alt="通知アイコン">
-                    </a>
-                </div>
-                <div class="div-outside-image">
-                    <a class="icon-link" href="" aria-label="DM">
-                        <img class="image-icon" src="image/dm.png" alt="DMアイコン">
-                    </a>
-                </div>
-                <div class="div-outside-image">
-                    <a class="icon-link" href="" aria-label="アカウント画面">
-                        <img class="image-icon" src="image/human.png" alt="人アイコン">
-                    </a>
+                <div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="ホーム">
+                            <img class="image-icon" src="image/home.png" alt="ホームアイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>ホーム</div>
+                    </div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="検索">
+                            <img class="image-icon" src="image/serch.png" alt="検索アイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>検索</div>
+                    </div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="通知">
+                            <img class="image-icon" src="image/bell.png" alt="通知アイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>通知</div>
+                    </div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="DM">
+                            <img class="image-icon" src="image/dm.png" alt="DMアイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>メッセージ</div>
+                    </div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="プロフィール">
+                            <img class="image-icon" src="image/human.png" alt="人アイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>プロフィール</div>
+                    </div>
+                    <div class="div-outside-image icon-container">
+                        <a class="icon-link simple-icon" href="" aria-label="設定">
+                            <img class="image-icon" src="image/setting.png" alt="設定アイコン">
+                        </a>
+                        <div class="icon-discription" style='display: "none";'>設定</div>
+                    </div>
+                    <div class="div-outside-image post-icon icon-container">
+                        <img class="image-icon" src="image/cathand2.png" alt="投稿開始ボタン">
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
         <!-- タイムライン系 -->
-        <div class="main center border">
-            <div>ホーム</div>
-            <div>投稿画面</div>
-            <div>投稿</div>
-        </div>
-        <!-- その他情報 -->
-        <div class="main right border">
-            right
-        </div>
+        <main>
+            <div class="main center border">
+                <!-- メニュー名 -->
+                <div class="menu-name-parent" aria-label="メニュー名">
+                    <div class="menu-name" aria-label="メニュー名">ホーム</div>
+                </div>
+                <!-- メイン -->
+                <div style="border-bottom: 8px solid rgb(48, 60, 67);; height: auto;  padding: 2px; " class="post-screen">
+                    <div style="float: left; " aria-label="ユーザアイコン">
+                        <div style="margin: 5px;">
+                            <a class="" href="" aria-label="ユーザアイコン">
+                                <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/user.jpg" alt="ユーザアイコン">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-area" contentEditable="true" placeholder="aaaaaa"></div>
+                    <div style="display: flex;  margin-top: 15px;margin-bottom: 5px;">
+                        <div style="display: flex; margin-left: auto;">
+                            <!-- <div style="float: left; min-height: 100%;margin: 0 10px;"> -->
+                            <a style="margin: 0 5px;" class="icon-link simple-icon" href="" aria-label="写真追加">
+                                <img class="image-icon" src="image/pic.png" alt="写真追加アイコン">
+                            </a>
+                            <!-- </div> -->
+                            <a style="margin: 0 5px;" href="" class="btn btn--orange btn--radius" aria-label="投稿ボタン">投稿</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- みんなの投稿 -->
+                <div style="">
+                    <div style="padding: 10px 0;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;" class="post-screen">
+                        <!-- ユーザ画像 -->
+                        <!-- ブロック1 -->
+                        <div style="margin-right: 13px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/user.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ユーザ名,IDなどの情報 -->
+                        <!-- ブロック2 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">テストユーザ名</a>
+                                </div>
+                                <div style="float: left;margin-left: 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);;" href="">@user_id</a>
+                                </div>
+                                <div style="color: rgb(115, 129, 136); ;margin-left: 15px;">202x年x月x日</div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div>
+                                <div style="padding: 5px 0; font-size: 15px;" aria-label="投稿した文字を表示">投稿した文字を表示</div>
+                                <div style="padding: 5px 0;" aria-label="投稿した写真を表示">
+                                    <img src="image/user.jpg" alt="投稿した写真を表示" style="width: 90%; border-radius: 5%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- その他情報 -->
+            <div class="main right border">
+                right
+            </div>
+        </main>
     </div>
 </body>
 

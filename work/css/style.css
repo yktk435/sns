@@ -1,6 +1,7 @@
 html {
     background-color: rgb(20, 29, 38);
     color: white;
+    padding: 0px;
 }
 
 .border {
@@ -29,7 +30,7 @@ html {
 }
 
 .center {
-    background-color: orange;
+    /* background-color: orange; */
     width: 100px;
     height: 100px;
     float: left;
@@ -53,7 +54,13 @@ html {
 }
 
 
+/************************************************/
+
+
 /* アイコン系 */
+
+
+/************************************************/
 
 .image-icon {
     width: 30px;
@@ -68,6 +75,190 @@ div.left>a {
 .div-outside-image {
     width: 50px;
     height: 50px;
-    text-align: center;
     margin: 10px auto;
+}
+
+.if-spread {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px 30px;
+}
+
+header {
+    /* position: fixed; */
+}
+
+.site-image-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.site-image {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.post-icon {
+    margin-top: 40px;
+    background-color: rgb(64, 169, 255);
+}
+
+.icon-container {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-discription {
+    font-weight: 900;
+    position: absolute;
+    left: 100px;
+    font-size: larger;
+}
+
+
+/************************************************/
+
+
+/* ライムライン系 */
+
+
+/************************************************/
+
+
+/* ホーム */
+
+.menu-name-parent {
+    /* background-color: red; */
+    height: 50px;
+    border-bottom: 2px solid rgb(48, 60, 67);
+    /* border-top: 2px solid rgb(48, 60, 67); */
+    position: relative;
+}
+
+.menu-name {
+    font-size: larger;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translate(30%, -50%);
+}
+
+
+/* 投稿画面 */
+
+.post-screen {
+    height: 150px;
+}
+
+
+/* --- INPUT=TEXTの標準デザイン設定 ---------------------*/
+
+.text-area {
+    display: block;
+    /* width: 90%; */
+    /* 入力域の最大幅 */
+    background: transparent;
+    /* 入力域の背景色 */
+    border-bottom: 1px solid rgb(48, 60, 67);
+    /* 入力域の枠線   */
+    border-radius: 4px;
+    /* 入力域の角丸   */
+    padding: 8px;
+    /* 入力文字の余白 */
+    font-size: 16px;
+    /* 入力文字サイズ */
+    color: white;
+    /* 入力文字の色   */
+    font-weight: bold;
+    /* 入力文字の太字 */
+    letter-spacing: .1em;
+    /* 入力文字の間隔 */
+    line-height: 19px;
+    /* 入力文字の間隔 */
+    overflow: scroll;
+    /* margin: 5px auto; */
+}
+
+
+/* --- 入力フィールドにフォーカスか来たら ----------------*/
+
+.text-area:focus {
+    /* border-color: white; */
+    /* 枠線色     */
+    background-color: transparent;
+    /* 背景色     */
+    outline: 0;
+}
+
+
+/* --- 入力説明の文字(標準) -----------------------------*/
+
+.text-area:placeholder-shown {
+    color: rgba(106, 123, 135);
+    /* 文字色     */
+}
+
+
+/* --- 入力説明の文字(Chrome,Safari,Android,iOS等) ---- -*/
+
+.text-area::-webkit-input-placeholder {
+    color: rgba(106, 123, 135);
+    /* 文字色     */
+}
+
+
+/* --- 入力説明の文字(IE用) -----------------------------*/
+
+.text-area:-ms-input-placeholder {
+    color: rgba(106, 123, 135);
+    /* 文字色     */
+}
+
+
+/* ユーザアイコン */
+
+
+/* 投稿ボタン */
+
+.btn--orange,
+a.btn--orange {
+    color: #fff;
+    background-color: rgb(64, 169, 255);
+}
+
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: #fff;
+    background: rgb(55, 144, 218);
+}
+
+a.btn--radius {
+    border-radius: 100vh;
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-size: large;
+    font-weight: 700;
+    /* line-height: 1.5; */
+    position: relative;
+    display: inline-block;
+    padding: 3px 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #fff;
+    border-radius: 0.5rem;
+    margin: 0 0 0 auto;
 }
