@@ -18,14 +18,23 @@ window.onload = () => {
     //アイコン押したら青くなる処理
     let aTags = Array.from(document.querySelectorAll('div.left a.simple-icon'))
     aTags.forEach(aTag => {
-        aTag.addEventListener('click', (e) => {
-            //遷移防止
-            e.preventDefault()
-                //一旦ボタンの色を戻す(白にする)
-            aTags.forEach(aTag2 => aTag2.firstElementChild.style.webkitFilter = "")
-                //クリックしたアイコンの色を変える
-            e.target.style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
+            aTag.addEventListener('click', (e) => {
+                //遷移防止
+                e.preventDefault()
+                    //一旦ボタンの色を戻す(白にする)
+                aTags.forEach(aTag2 => aTag2.firstElementChild.style.webkitFilter = "")
+                    //クリックしたアイコンの色を変える
+                e.target.style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
+            })
         })
+        //右側の検索バーにフォーカスしたら、周りに青い線を入れる
+    let input_serach_bar = document.querySelector('input.search-bar')
+    let searchIcon = document.querySelector('.search-icon')
+    let input_serach_bar_parent = document.querySelector('.search-bar-parent')
+    input_serach_bar.addEventListener('focus', (e) => {
+        input_serach_bar_parent.style.border = "1px solid rgba(0,151,236)"
+        console.log(searchIcon)
+        searchIcon.style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
     })
 }
 
@@ -81,4 +90,11 @@ function changeSize() {
 
         }
     }
+}
+
+function focusOut(e) {
+    let input_serach_bar_parent = document.querySelector('.search-bar-parent')
+    let searchIcon = document.querySelector('.search-icon')
+    searchIcon.style.webkitFilter = ""
+    input_serach_bar_parent.style.border = ""
 }

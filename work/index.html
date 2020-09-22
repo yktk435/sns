@@ -128,7 +128,21 @@
             </div>
             <!-- その他情報 -->
             <div class="main right border">
-                right
+                <!-- 検索バー -->
+                <div class='search-bar-parent' style="background-color:rgb(32, 45, 46);margin: 15px; border-radius: 30px;height: 50px;width: 500px;display: flex;justify-content: center;align-items: center;width: 90%;">
+                    <div style="width: 80%;">
+                        <!-- 検索アイコン -->
+                        <div style="float: left;    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;">
+                            <img src="image/serch.png" class="search-icon" alt="検索アイコン" style="width: 20px;padding: 0 10px;">
+                        </div>
+                        <div style="padding: 0 0px;">
+                            <input placeholder="キーワード検索" type="text" class="search-bar" aria-label="検索バー" onblur="focusOut(this)" onfocus="focus()">
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
