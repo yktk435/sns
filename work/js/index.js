@@ -50,17 +50,15 @@ function changeSize() {
             'width': document.documentElement.clientWidth,
             'height': document.documentElement.clientHeight
         }
-        // headerの画面サイズを調整
+        // スクロールのための画面の高さ変更
     let headerfirstElementChild = document.querySelector('header').firstElementChild
-    let mainfirstElementChild = document.querySelector('main').firstElementChild
+    let mainfirstElementChild = document.querySelector('.main-container')
     let rightArea = document.querySelector('.main.right.border')
-    console.log(headerfirstElementChild)
-    console.log("height", document.documentElement.clientHeight)
     headerfirstElementChild.style.height = document.documentElement.clientHeight + "px"
-    mainfirstElementChild.style.height = document.documentElement.clientHeight + "px"
+    mainfirstElementChild.style.height = (document.documentElement.clientHeight - 50) + "px"
     rightArea.style.height = document.documentElement.clientHeight + "px"
-    console.log(headerfirstElementChild)
-        // headerの画面サイズを調整 終わり
+
+    // スクロールのための画面の高さ変更 終わり
 
     if (1270 <= size.width) { //3分割 すべて展開
 
