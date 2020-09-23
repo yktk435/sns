@@ -13,58 +13,79 @@
     <div class="parent">
         <!-- アイコン -->
         <header>
-            <div class="main left border">
+            <div class="main left border" style="overflow: auto;">
                 <div class="div-outside-image site-image">
-                    <a class="icon-link" href="" aria-label="サイトアイコン">
-                        <img class="image-icon site-image-icon" src="image/cat.png" alt="サイトアイコン">
+                    <a class="icon-link icon-to-center-for-a" href="" aria-label="サイトアイコン">
+                        <img class="image-icon icon-to-center-for-img site-image-icon" src="image/cat.png" alt="サイトアイコン">
                     </a>
                 </div>
                 <div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="ホーム">
-                            <img class="image-icon" src="image/home.png" alt="ホームアイコン">
+
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/home.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">ホーム</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>ホーム</div>
                     </div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="検索">
-                            <img class="image-icon" src="image/serch.png" alt="検索アイコン">
+
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/serch.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">検索</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>検索</div>
                     </div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="通知">
-                            <img class="image-icon" src="image/bell.png" alt="通知アイコン">
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/bell.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">通知</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>通知</div>
                     </div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="DM">
-                            <img class="image-icon" src="image/dm.png" alt="DMアイコン">
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/dm.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">メッセージ</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>メッセージ</div>
                     </div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="プロフィール">
-                            <img class="image-icon" src="image/human.png" alt="人アイコン">
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/human.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">プロフィール</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>プロフィール</div>
                     </div>
-                    <div class="div-outside-image icon-container">
-                        <a class="icon-link simple-icon" href="" aria-label="設定">
-                            <img class="image-icon" src="image/setting.png" alt="設定アイコン">
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/setting.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">設定</div>
                         </a>
-                        <div class="icon-discription" style='display: "none";'>設定</div>
                     </div>
-                    <div class="div-outside-image post-icon icon-container">
-                        <img class="image-icon" src="image/cathand2.png" alt="投稿開始ボタン">
+                    <!-- 投稿ボタン -->
+                    <div class="div-outside-image icon-container" style="width: 70%;">
+                        <a class="a-to-block post-icon" href="" style="border-radius: 100px; position: relative ;">
+                            <div class='block-to-center'>
+                                <img class="image-icon" src="image/cathand2.png" alt="投稿開始ボタン">
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
         </header>
+
         <!-- タイムライン系 -->
         <main>
-            <div class="main center border">
+            <div class="main center border" style="overflow: auto;">
                 <!-- メニュー名 -->
                 <div class="menu-name-parent" aria-label="メニュー名">
                     <div class="menu-name" aria-label="メニュー名">ホーム</div>
@@ -92,10 +113,10 @@
                 </div>
                 <!-- みんなの投稿 -->
                 <div style="">
-                    <div style="padding: 10px 0;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;" class="post-screen">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;" class="post-screen">
                         <!-- ユーザ画像 -->
                         <!-- ブロック1 -->
-                        <div style="margin-right: 13px;" aria-label="ユーザアイコン">
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
                             <div style="margin: 5px;">
                                 <a class="" href="" aria-label="ユーザアイコン">
                                     <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/user.jpg" alt="ユーザアイコン">
@@ -110,26 +131,28 @@
                                 <div style="float: left;margin-left: 5px;">
                                     <a style="text-decoration: none; color: white;font-weight: bold;" href="">テストユーザ名</a>
                                 </div>
-                                <div style="float: left;margin-left: 15px;">
-                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);;" href="">@user_id</a>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@user_id</a>
                                 </div>
                                 <div style="color: rgb(115, 129, 136); ;margin-left: 15px;">202x年x月x日</div>
                             </div>
                             <!-- 投稿内容 -->
                             <div>
-                                <div style="padding: 5px 0; font-size: 15px;" aria-label="投稿した文字を表示">投稿した文字を表示</div>
+                                <div class="font
+                                " style="padding: 5px 0; " aria-label="投稿した文字を表示">投稿した文字を表示</div>
                                 <div style="padding: 5px 0;" aria-label="投稿した写真を表示">
-                                    <a href="" onclick="return false">
+                                    <a href="" onclick="return">
                                         <img src="image/user.jpg" alt="投稿した写真を表示" style="width: 90%; border-radius: 5%;">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- その他情報 -->
-            <div class="main right border">
+            <div class="main right border" style="overflow: auto;">
                 <!-- 検索バー -->
                 <div class='search-bar-parent' style="background-color:rgb(32, 45, 46);margin: 15px; border-radius: 30px;height: 50px;width: 500px;display: flex;justify-content: center;align-items: center;width: 90%;">
                     <div style="width: 80%;">

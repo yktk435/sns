@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" title="Green styles">
+</head>
+
+<body>
+    <script type="text/javascript" src="js/index.js"></script>
+    <div class="parent">
+        <!-- アイコン -->
+        <header>
+            <div class="main left border" style="overflow: auto;">
+                <div class="div-outside-image site-image">
+                    <a class="icon-link icon-to-center-for-a" href="" aria-label="サイトアイコン">
+                        <img class="image-icon icon-to-center-for-img site-image-icon" src="image/cat.png" alt="サイトアイコン">
+                    </a>
+                </div>
+                <div>
+
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/home.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">ホーム</div>
+                        </a>
+                    </div>
+
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/serch.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">検索</div>
+                        </a>
+                    </div>
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/bell.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">通知</div>
+                        </a>
+                    </div>
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/dm.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">メッセージ</div>
+                        </a>
+                    </div>
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/human.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">プロフィール</div>
+                        </a>
+                    </div>
+                    <div class="if-spreaded mark">
+                        <a href="" class="spreaded-icon-a">
+                            <div style="float: left;">
+                                <img class="img-size" src="image/setting.png" alt="ホームアイコン">
+                            </div>
+                            <div class="icon-discription spreaded-icon-name">設定</div>
+                        </a>
+                    </div>
+                    <!-- 投稿ボタン -->
+                    <div class="div-outside-image icon-container" style="width: 70%;margin-bottom: 140px;">
+                        <a class="a-to-block post-icon" href="" style="border-radius: 100px; position: relative ;">
+                            <div class='block-to-center'>
+                                <img class="image-icon" src="image/cathand2.png" alt="投稿開始ボタン">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- タイムライン系 -->
+        <main>
+            <div class="main center border" style="overflow: auto;">
+                <!-- メニュー名 -->
+                <div class="menu-name-parent" aria-label="メニュー名">
+                    <div class="menu-name" aria-label="メニュー名">通知</div>
+                </div>
+                <!-- すべて・返信の通知の選択 -->
+                <div style="width: 100%;display: inline-flex;">
+                    <div class="notification-button-all" style="-webkit-filter: invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%); padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);"
+                        align="center" onclick="notificationToggle(this)">
+                        すべて
+                    </div>
+                    <div class="notification-button-rep" style="padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);" align="center" onclick="notificationToggle(this)">
+                        返信
+                    </div>
+                </div>
+                <!-- 返信の通知 -->
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="">
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro.png" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro1234</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro1234</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;width: -webkit-fill-available;" class="post-screen">
+                        <!-- 1ブロック ユーザ画像 -->
+                        <div style="margin-right: 10px;" aria-label="ユーザアイコン">
+                            <div style="margin: 5px;">
+                                <a class="" href="" aria-label="ユーザアイコン">
+                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/taro2.jpg" alt="ユーザアイコン">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2ブロック ユーザ名,IDなどの情報 -->
+                        <div style="display: block;;">
+                            <!-- ユーザ名・返信情報 -->
+                            <div>
+                                <div style="float: left;margin-left: 5px;">
+                                    <a style="text-decoration: none; color: white;font-weight: bold;" href="">猫の太郎</a>
+                                </div>
+                                <div style="float: left;margin:0 15px;">
+                                    <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@taro4321</a>
+                                </div>
+                                <div style="float: left; color: rgb(115, 129, 136);">202x年x月x日</div>
+                                <!-- 返信先情報 -->
+                                <div aria-label="返信先情報" style="color: rgba(106, 123, 135);">
+                                    返信先:
+                                    <div style="display: inline-flex;margin: 0 2px;">
+                                        <a style="text-decoration: none; color: rgb(29, 161, 242);" href="">@taro4321</a>
+                                    </div>
+                                    さん
+                                </div>
+                            </div>
+                            <!-- 投稿内容 -->
+                            <div class="font">
+                                返信内容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- すべての通知 -->
+            </div>
+            <!-- その他情報 -->
+            <div class="main right border" style="overflow: auto;">
+                <!-- 検索バー -->
+                <div class="search-bar-parent" style="background-color:rgb(32, 45, 46);margin: 15px; border-radius: 30px;height: 50px;width: 500px;display: flex;justify-content: center;align-items: center;width: 90%;">
+                    <div style="width: 80%;">
+                        <!-- 検索アイコン -->
+                        <div style="float: left;display: flex;justify-content: center;align-items: center;height: 40px;">
+                            <img src="image/serch.png" class="search-icon" alt="検索アイコン" style="width: 20px;padding: 0 10px;">
+                        </div>
+                        <div style="padding: 0 0px;">
+                            <input placeholder="キーワード検索" type="text" class="search-bar" aria-label="検索バー" onblur="focusOut(this)" onfocus="focus()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -4,6 +4,41 @@ html {
     padding: 0px;
 }
 
+
+/********************/
+
+
+/* 共有 */
+
+
+/********************/
+
+.font {
+    font-size: 15px;
+}
+
+.a-to-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.block-to-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/********************/
+
+
+/* 共有ここまで */
+
+
+/********************/
+
 .border {
     border: 1px solid rgb(48, 60, 67);
     border: 1px solid rgb(48, 60, 67);
@@ -60,6 +95,9 @@ html {
 /* アイコン系 */
 
 
+/* header */
+
+
 /************************************************/
 
 .image-icon {
@@ -73,8 +111,8 @@ div.left>a {
 }
 
 .div-outside-image {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin: 10px auto;
 }
 
@@ -95,26 +133,90 @@ header {
 
 .site-image {
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .post-icon {
-    margin-top: 40px;
     background-color: rgb(64, 169, 255);
 }
 
-.icon-container {
-    border-radius: 50%;
+.post-icon:hover {
+    background: rgb(55, 144, 218);
+}
+
+.post-spread {}
+
+.outer {
+    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 13px 20px;
 }
 
-.icon-discription {
+
+/* .icon-discription {
     font-weight: 900;
     position: absolute;
     left: 100px;
     font-size: larger;
+} */
+
+.icon-to-center-for-a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.icon-to-center-for-a:hover {
+    background-color: rgba(90, 230, 255, 0.068);
+    filter: invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%);
+}
+
+.icon-to-center-for-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+/* すべて展開したときの動作 */
+
+.if-spreaded {
+    display: inline-flex;
+    margin: 5px 20px;
+}
+
+.spreaded-icon-a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    /* background-color: red; */
+    border-radius: 100px;
+    padding: 8px 15px;
+}
+
+.spreaded-icon-a:hover {
+    background-color: rgba(90, 230, 255, 0.068);
+    filter: invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%);
+}
+
+.img-size {
+    width: 30px;
+}
+
+.spreaded-icon-name {
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -264,7 +366,13 @@ button.btn {
 }
 
 
+/************************/
+
+
 /* 右側 */
+
+
+/************************/
 
 
 /* 検索バー*/
@@ -341,4 +449,23 @@ button.btn {
 .search-bar:-ms-input-placeholder {
     color: rgba(106, 123, 135);
     /* 文字色     */
+}
+
+
+/****************************************************************/
+
+
+/* 通知 */
+
+
+/****************************************************************/
+
+.notification-button-rep:hover {
+    background-color: rgba(90, 230, 255, 0.068);
+    color: rgb(29, 161, 242);
+}
+
+.notification-button-all:hover {
+    background-color: rgba(90, 230, 255, 0.068);
+    color: rgb(29, 161, 242);
 }
