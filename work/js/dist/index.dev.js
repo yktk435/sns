@@ -20,8 +20,8 @@ window.onload = function () {
   aTags.forEach(function (aTag) {
     aTag.addEventListener('click', function (e) {
       //遷移防止
-      e.preventDefault(); //一旦ボタンの色を戻す(白にする)
-
+      // e.preventDefault()
+      //一旦ボタンの色を戻す(白にする)
       aTags.forEach(function (aTag2) {
         return aTag2.style = "";
       }); //クリックしたアイコンの色を変える
@@ -138,3 +138,31 @@ function notificationToggle(e) {
 
   return false; // console.log(e.className)
 }
+/******************************************/
+// プロフィール
+
+/******************************************/
+//メニューをクリックすると下がブルーの線になる
+
+
+function BlueLineWhenClick(e) {
+  var menus = document.querySelectorAll('#prof-menu');
+  menus.forEach(function (menu) {
+    menu.style.webkitFilter = "";
+  });
+  e.style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)";
+}
+
+var aTags = Array.from(document.querySelectorAll('.spreaded-icon-a'));
+aTags.forEach(function (aTag) {
+  aTag.addEventListener('click', function (e) {
+    //遷移防止
+    e.preventDefault(); //一旦ボタンの色を戻す(白にする)
+
+    aTags.forEach(function (aTag2) {
+      return aTag2.style = "";
+    }); //クリックしたアイコンの色を変える
+
+    e.target.closest('.spreaded-icon-a').style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)";
+  });
+});

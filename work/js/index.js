@@ -23,8 +23,8 @@ window.onload = () => {
     aTags.forEach(aTag => {
             aTag.addEventListener('click', (e) => {
                 //遷移防止
-                e.preventDefault()
-                    //一旦ボタンの色を戻す(白にする)
+                // e.preventDefault()
+                //一旦ボタンの色を戻す(白にする)
                 aTags.forEach(aTag2 => aTag2.style = "")
                     //クリックしたアイコンの色を変える
                 e.target.closest('.spreaded-icon-a').style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
@@ -143,3 +143,28 @@ function notificationToggle(e) {
 
 
 }
+
+/******************************************/
+// プロフィール
+/******************************************/
+//メニューをクリックすると下がブルーの線になる
+function BlueLineWhenClick(e) {
+    let menus = document.querySelectorAll('#prof-menu');
+    menus.forEach(menu => {
+        menu.style.webkitFilter = ""
+    })
+    e.style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
+}
+
+
+let aTags = Array.from(document.querySelectorAll('.spreaded-icon-a'))
+aTags.forEach(aTag => {
+    aTag.addEventListener('click', (e) => {
+        //遷移防止
+        e.preventDefault()
+            //一旦ボタンの色を戻す(白にする)
+        aTags.forEach(aTag2 => aTag2.style = "")
+            //クリックしたアイコンの色を変える
+        e.target.closest('.spreaded-icon-a').style.webkitFilter = "invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%)"
+    })
+})

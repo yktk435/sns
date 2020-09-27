@@ -85,87 +85,86 @@
             <div class="main center border">
                 <!-- メニュー名 -->
                 <div class="menu-name-parent" aria-label="メニュー名">
-                    <div class="menu-name" aria-label="メニュー名">ホーム</div>
+                    <div class="menu-name" aria-label="メニュー名">ユーザ名</div>
+                    <!-- <div class="menu-name" aria-label="メニュー名" style="transform: translate(90%, -42%);right: 8%;">
+                        <a class="new-action" href="" aria-label="新規アクション">
+                            <img class="image-icon" src="image/plus.png" alt="新規メッセージ">
+                        </a>
+                    </div> -->
                 </div>
-                <!-- メイン -->
-                <div class="main-container" style="overflow: auto;">
-                    <div style="border-bottom: 8px solid rgb(48, 60, 67);; height: auto;  padding: 2px; " class="post-screen">
-                        <div style="float: left; " aria-label="ユーザアイコン">
-                            <div style="margin: 5px;">
-                                <a class="" href="" aria-label="ユーザアイコン">
-                                    <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/user.jpg" alt="ユーザアイコン">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-area" contentEditable="true" placeholder="aaaaaa"></div>
-                        <div style="display: flex;  margin-top: 15px;margin-bottom: 5px;">
-                            <div style="display: flex; margin-left: auto;">
-                                <!-- <div style="float: left; min-height: 100%;margin: 0 10px;"> -->
-                                <a style="margin: 0 5px;" class="icon-link simple-icon" href="" aria-label="写真追加">
-                                    <img class="image-icon" src="image/pic.png" alt="写真追加アイコン">
-                                </a>
-                                <!-- </div> -->
-                                <a style="margin: 0 5px;" href="" class="btn btn--orange btn--radius" aria-label="投稿ボタン">投稿</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- みんなの投稿 -->
-                    <div style="">
-                        <div style="padding: 10px 15px;border-bottom: 1px solid rgb(48, 60, 67); display: inline-flex; height: auto;" class="post-screen">
+                <!-- ユーザプロフィール画面 -->
+                <div class="main-container" style="overflow: auto; height: 368px;">
+                    <div style="
+    position: relative;
+">
+                        <!-- ヘッダ画像 -->
+                        <div>
+                            <a href="">
+                                <img src="image/user_header.jpg" alt="" style="    width: 100%;
+                                height: 200px;
+                                object-fit: cover;
+                                object-position: 0% 28%;">
+                            </a>
                             <!-- ユーザ画像 -->
-                            <!-- ブロック1 -->
-                            <div style="margin-right: 10px;" aria-label="ユーザアイコン">
-                                <div style="margin: 5px;">
-                                    <a class="" href="" aria-label="ユーザアイコン">
-                                        <img style="width: 50px;height: 50px; border-radius: 50%;" class="" src="image/user.jpg" alt="ユーザアイコン">
-                                    </a>
-                                </div>
+                            <a href="" style="
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translate(0, -50%);
+">
+                                <img src="image/user.jpg" alt="" style="width: 140px;
+                            border-radius: 50%;
+                            height: 140px;
+                            object-fit: cover;
+                            object-position: 20% 45%;
+                            border: 5px solid rgb(20, 29, 38);">
+
+                        </div>
+                        <!-- プロフィール部分 -->
+                        <div style="padding: 15px;">
+                            <!-- プロフィール編集ボタン -->
+                            <div class="icon-container" style="width: 170px;margin: 0px 0px 0px auto;height: 40px;">
+                                <a class="a-to-block edit-prof" href="" style="border-radius: 100px;position: relative;color: white;text-decoration: none;border: 1px solid rgba(29,161,242,1.00);color: rgba(29,161,242,1.00);">
+                                    <div class="" style="position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 80%;height: 20px;text-align: center;font-size: 15px;font-weight: bold;">プロフィールを編集</div>
+                                </a>
                             </div>
-                            <!-- ユーザ名,IDなどの情報 -->
-                            <!-- ブロック2 -->
-                            <div style="display: block;;">
+                            <!-- ユーザ名とユーザIDを表示 -->
+                            <div>
                                 <!-- ユーザ名 -->
-                                <div>
-                                    <div style="float: left;margin-left: 5px;">
-                                        <a style="text-decoration: none; color: white;font-weight: bold;" href="">テストユーザ名</a>
-                                    </div>
-                                    <div style="float: left;margin:0 15px;">
-                                        <a style="text-decoration: none; color:  rgb(115, 129, 136);" href="">@user_id</a>
-                                    </div>
-                                    <div style="color: rgb(115, 129, 136); ;margin-left: 15px;">202x年x月x日</div>
+                                <div style="padding-top:10px ; font-size: 20px;font-weight: bold;">ユーザ名</div>
+                                <!-- ユーザID -->
+                                <div style="color: rgb(115, 129, 136);margin-top:5px ;">@user_id</div>
+                            </div>
+                            <!-- 投稿・返信・メディア(写真)・いいね(ぐっと)を表示 -->
+                            <div style="width: 100%;display: inline-flex;">
+                                <div id="prof-menu" class="blue-when-hover" style="-webkit-filter: invert(91%) sepia(99%) saturate(10000%) hue-rotate(203deg) brightness(169%) contrast(135%); padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);"
+                                    align="center" onclick="BlueLineWhenClick(this)">
+                                    投稿
                                 </div>
-                                <!-- 投稿内容 -->
-                                <div>
-                                    <div class="font
-                                " style="padding: 5px 0; " aria-label="投稿した文字を表示">投稿した文字を表示</div>
-                                    <div style="padding: 5px 0;" aria-label="投稿した写真を表示">
-                                        <a href="" onclick="return">
-                                            <img src="image/user.jpg" alt="投稿した写真を表示" style="width: 90%; border-radius: 5%;">
-                                        </a>
-                                    </div>
+                                <div id="prof-menu" class="blue-when-hover" style="padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);" align="center" onclick="BlueLineWhenClick(this)">
+                                    返信
+                                </div>
+                                <div id="prof-menu" class="blue-when-hover" style="padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);" align="center" onclick="BlueLineWhenClick(this)">
+                                    写真
+                                </div>
+                                <div id="prof-menu" class="blue-when-hover" style="padding: 15px 0;float:left;width: calc(100%/2);font-weight: bold;border-bottom: 3px solid rgb(48, 60, 67);" align="center" onclick="BlueLineWhenClick(this)">
+                                    ぐっと
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <!-- ユーザ投稿一覧 -->
+                    <div></div>
                 </div>
             </div>
             <!-- その他情報 -->
             <div class="main right border" style="overflow: auto;">
-                <!-- 検索バー -->
-                <div class='search-bar-parent' style="background-color:rgb(32, 45, 46);margin: 15px; border-radius: 30px;height: 50px;width: 500px;display: flex;justify-content: center;align-items: center;width: 90%;">
-                    <div style="width: 80%;">
-                        <!-- 検索アイコン -->
-                        <div style="float: left;    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;">
-                            <img src="image/serch.png" class="search-icon" alt="検索アイコン" style="width: 20px;padding: 0 10px;">
-                        </div>
-                        <div style="padding: 0 0px;">
-                            <input placeholder="キーワード検索" type="text" class="search-bar" aria-label="検索バー" onblur="focusOut(this)" onfocus="focus()">
-                        </div>
-                    </div>
+                <!-- 新しいメッセージを作るボタン -->
+                <div class="div-outside-image icon-container" style="width: 70%;margin: 30px auto;">
+                    <a class="a-to-block post-icon" href="" style="border-radius: 100px; position: relative ;color: white;text-decoration: none;">
+                        <div class="" style="position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 80%;height: 20px;text-align: center;font-size: 15px;font-weight: bold;">メッセージ作成</div>
+                    </a>
                 </div>
             </div>
         </main>
