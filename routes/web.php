@@ -18,6 +18,23 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/study','StudyController');
-Route::get('/','ModelClassController');
-Route::get('article','ArticleController@index');
+Route::get('/study', 'StudyController');
+/********************************************/
+// テスト用
+/********************************************/
+Route::get('/', 'ModelClassController');
+Route::get('test', 'ModelClassController@test');
+Route::resource('test', 'RestTestController');
+
+
+
+
+/********************************************/
+// rest
+/********************************************/
+Route::resource('article', 'RestArticleController');
+Route::resource('comment', 'RestCommentController');
+Route::resource('member', 'RestMemberController');
+Route::resource('message', 'RestMessageController');
+Route::resource('notification', 'RestNotificationController');
+Route::resource('photo', 'RestPhotoController');

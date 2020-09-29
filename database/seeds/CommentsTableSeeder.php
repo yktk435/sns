@@ -17,7 +17,7 @@ class CommentsTableSeeder extends Seeder
             'created_at'=>date("Y-m-d H:i:s"),
             'content'=>'テストcontent',
             'article_id'=>123,
-            'comment_id'=>1234,
+            'member_id'=>1234,
         ];
         DB::table('comments')->insert($param);
     }

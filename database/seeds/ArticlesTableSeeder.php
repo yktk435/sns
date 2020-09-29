@@ -11,7 +11,7 @@ class ArticlesTableSeeder extends Seeder
             'id'=>10,
             'created_at'=>'1923-03-15 14:53:21',
             'content'=>'テストcontent',
-            'article_id'=>123,
+            'member_id'=>123,
         ];
         DB::table('articles')->insert($param);
     }

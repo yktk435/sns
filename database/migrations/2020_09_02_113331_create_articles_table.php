@@ -17,8 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->dateTime('created_at');
             $table->string('content');
-            $table->integer('article_id');
-            
+            $table->integer('member_id');
         });
     }
 

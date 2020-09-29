@@ -16,9 +16,10 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('created_at');
-            $table->string('content');
-            $table->integer('article_id');
-            
+            $table->string('name');
+            $table->string('password');
+            $table->string('email');
+            $table->string('icon');    
         });
     }
 
