@@ -12,6 +12,9 @@ class Member extends Model
     function articles(){
         return $this->hasMany('App\Article');
     }
+    function token(){
+        return $this->hasOne('App\Token');
+    }
     public function getData()
     {
         return $this->id . ': ' . $this->name . ' (' . $this->age . ')';

@@ -13,9 +13,9 @@ class RestTestController extends Controller
      */
     public function index(Request $request)
     {
-print_r($request->url());
-print "\n";
-print_r($request->fullUrl());
+        print_r($request->url());
+        print "\n";
+        print_r($request->fullUrl());
         // return ['ok'];
     }
 

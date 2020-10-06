@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudyController;
+use App\Http\Middleware\SettionControllMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,7 @@ Route::get('/study', 'StudyController');
 /********************************************/
 Route::get('/', 'ModelClassController');
 // Route::get('test', 'ModelClassController@test');
-Route::resource('test', 'RestTestController');
+Route::resource('test', 'RestTestController')->middleware(SettionControllMiddleware::class);
 
 
 
