@@ -11,9 +11,12 @@ class RestTestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return ['ok'];
+print_r($request->url());
+print "\n";
+print_r($request->fullUrl());
+        // return ['ok'];
     }
 
     /**

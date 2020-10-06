@@ -23,7 +23,7 @@ Route::get('/study', 'StudyController');
 // テスト用
 /********************************************/
 Route::get('/', 'ModelClassController');
-Route::get('test', 'ModelClassController@test');
+// Route::get('test', 'ModelClassController@test');
 Route::resource('test', 'RestTestController');
 
 
